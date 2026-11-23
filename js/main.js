@@ -1,13 +1,13 @@
-/* ============================================================
+﻿/* ============================================================
    OLHOS DE TIGRE VISTORIAS — JAVASCRIPT PRINCIPAL
-   Performance-first | Vanilla JS | Sem dependências externas
+   Performance-first | Vanilla JS | Compatível com GitHub Pages
    ============================================================ */
 
 (function () {
   'use strict';
 
   /* ---- CONSTANTES ---- */
-  const WA_NUMBER = '5511944445555';
+  const WA_NUMBER = '5511910339280';
   const WA_MSG_DEFAULT = encodeURIComponent('Olá! Encontrei a Olhos de Tigre Vistorias pelo site e gostaria de informações sobre vistoria veicular.');
 
   /* ---- MENU MOBILE ---- */
@@ -23,7 +23,7 @@
       body.style.overflow = isOpen ? 'hidden' : '';
     });
 
-    // Fechar ao clicar em link
+    // Fechar ao clicar em qualquer link do menu mobile
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.remove('active');
@@ -33,9 +33,9 @@
       });
     });
 
-    // Fechar ao clicar fora
+    // Fechar ao clicar fora do menu
     document.addEventListener('click', (e) => {
-      if (!navToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+      if (!navToggle.contains(e.target) && !mobileMenu.contains(e.target) && mobileMenu.classList.contains('active')) {
         mobileMenu.classList.remove('active');
         navToggle.classList.remove('active');
         navToggle.setAttribute('aria-expanded', 'false');
@@ -44,13 +44,13 @@
     });
   }
 
-  /* ---- HEADER SCROLL ---- */
+  /* ---- HEADER SCROLL SHADOW ---- */
   const header = document.querySelector('.header');
   if (header) {
     let lastScroll = 0;
     const handleScroll = () => {
       const current = window.scrollY;
-      if (current > 80) {
+      if (current > 50) {
         header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
       } else {
         header.style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)';
@@ -64,32 +64,36 @@
   document.querySelectorAll('.faq-question').forEach(question => {
     question.addEventListener('click', () => {
       const item = question.closest('.faq-item');
+      if (!item) return;
+
       const answer = item.querySelector('.faq-answer');
       const isActive = item.classList.contains('active');
 
-      // Fechar todos
+      // Fechar outros itens abertos
       document.querySelectorAll('.faq-item.active').forEach(openItem => {
         if (openItem !== item) {
           openItem.classList.remove('active');
-          openItem.querySelector('.faq-answer').style.maxHeight = '0';
-          openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+          const otherAnswer = openItem.querySelector('.faq-answer');
+          if (otherAnswer) otherAnswer.style.maxHeight = '0';
+          const otherBtn = openItem.querySelector('.faq-question');
+          if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
         }
       });
 
-      // Toggle atual
+      // Alternar o item clicado
       if (isActive) {
         item.classList.remove('active');
-        answer.style.maxHeight = '0';
+        if (answer) answer.style.maxHeight = '0';
         question.setAttribute('aria-expanded', 'false');
       } else {
         item.classList.add('active');
-        answer.style.maxHeight = answer.scrollHeight + 'px';
+        if (answer) answer.style.maxHeight = answer.scrollHeight + 'px';
         question.setAttribute('aria-expanded', 'true');
       }
     });
   });
 
-  /* ---- SCROLL ANIMATIONS ---- */
+  /* ---- ANIMAÇÕES AO ROLAR (IntersectionObserver) ---- */
   if ('IntersectionObserver' in window) {
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -98,75 +102,62 @@
           revealObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   } else {
-    // Fallback: mostrar tudo
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
   }
 
-  /* ---- LAZY LOADING (fallback para navegadores sem suporte nativo) ---- */
-  if (!('loading' in HTMLImageElement.prototype) && 'IntersectionObserver' in window) {
-    const imgObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          if (img.dataset.src) {
-            img.src = img.dataset.src;
-            img.removeAttribute('data-src');
-          }
-          observer.unobserve(img);
-        }
-      });
-    });
-    document.querySelectorAll('img[data-src]').forEach(img => imgObserver.observe(img));
-  }
+  /* ---- ACTIVE NAV (compatível com GitHub Pages e domínio próprio) ---- */
+  const pathParts = window.location.pathname.split('/');
+  const currentPage = pathParts.pop() || 'index.html';
+  const cleanCurrentPage = currentPage.split('?')[0].split('#')[0] || 'index.html';
 
-  /* ---- WHATSAPP TRACKING ---- */
-  document.querySelectorAll('a[href*="wa.me"]').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      // Tracking básico via console (integrar com GA4 se disponível)
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'whatsapp_click', {
-          'event_category': 'CTA',
-          'event_label': btn.dataset.ctaLabel || document.title,
-        });
-      }
-    });
-  });
-
-  /* ---- ACTIVE NAV ---- */
-  const currentPath = window.location.pathname;
-  document.querySelectorAll('.nav__link, .footer__link').forEach(link => {
+  document.querySelectorAll('.nav__link, .footer__link, .mobile-menu__link').forEach(link => {
     const href = link.getAttribute('href');
-    if (href && (currentPath === href || currentPath.endsWith(href))) {
-      link.classList.add('active');
+    if (!href) return;
+    const linkParts = href.split('/');
+    const linkTarget = linkParts.pop().split('?')[0].split('#')[0];
+
+    if (linkTarget && (linkTarget === cleanCurrentPage || (cleanCurrentPage === 'index.html' && (linkTarget === 'index.html' || linkTarget === './')))) {
+      if (!link.classList.contains('nav__dropdown-toggle')) {
+        link.classList.add('active');
+      }
     }
   });
 
-  /* ---- SMOOTH SCROLL para âncoras internas ---- */
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      const target = document.querySelector(anchor.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        const headerH = header ? header.offsetHeight : 70;
-        const top = target.getBoundingClientRect().top + window.scrollY - headerH - 20;
-        window.scrollTo({ top, behavior: 'smooth' });
-      }
-    });
-  });
+  /* ---- ANO ATUAL NO FOOTER ---- */
+  const anoEl = document.getElementById('ano');
+  if (anoEl) {
+    anoEl.textContent = new Date().getFullYear();
+  }
 
-  /* ---- FORM SUBMIT (WhatsApp redirect) ---- */
+  /* ---- FORMULÁRIO DE CONTATO (envio direto via WhatsApp) ---- */
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const nome = document.getElementById('nome')?.value || '';
-      const servico = document.getElementById('servico')?.value || 'vistoria';
-      const msg = encodeURIComponent(`Olá! Me chamo ${nome} e gostaria de informações sobre ${servico}.`);
-      window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, '_blank', 'noopener,noreferrer');
+      const nomeInput = document.getElementById('nome');
+      const telefoneInput = document.getElementById('telefone');
+      const servicoSelect = document.getElementById('servico');
+      const mensagemInput = document.getElementById('mensagem');
+
+      const nome = nomeInput ? nomeInput.value.trim() : '';
+      const telefone = telefoneInput ? telefoneInput.value.trim() : '';
+      const servico = servicoSelect ? servicoSelect.value : 'Vistoria Veicular';
+      const mensagem = mensagemInput ? mensagemInput.value.trim() : '';
+
+      let texto = `Olá! Me chamo *${nome}* e gostaria de agendar/tirar dúvidas sobre *${servico}*.`;
+      if (telefone) {
+        texto += `\nMeu telefone de contato: ${telefone}.`;
+      }
+      if (mensagem) {
+        texto += `\nDetalhes adicionais: ${mensagem}`;
+      }
+
+      const urlWhatsApp = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(texto)}`;
+      window.open(urlWhatsApp, '_blank', 'noopener,noreferrer');
     });
   }
 

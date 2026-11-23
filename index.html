@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -24,22 +24,22 @@
   <meta name="twitter:description" content="Empresa credenciada de vistoria veicular em Jarinu/SP.">
   <meta name="twitter:image" content="https://olhosdetigrevistorias.com.br/assets/logo-olhos-de-tigre-vistorias-automotivas.jpg">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="/assets/logo-olhos-de-tigre-vistorias-automotivas.jpg">
-  <link rel="apple-touch-icon" href="/assets/logo-olhos-de-tigre-vistorias-automotivas.jpg">
+  <!-- Favicon e Ícones -->
+  <link rel="icon" type="image/jpeg" href="assets/logo-olhos-de-tigre-vistorias-automotivas.jpg">
+  <link rel="apple-touch-icon" href="assets/logo-olhos-de-tigre-vistorias-automotivas.jpg">
 
   <!-- Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://www.google.com">
   <link rel="dns-prefetch" href="https://maps.googleapis.com">
 
-  <!-- Manifest -->
-  <link rel="manifest" href="/manifest.json">
+  <!-- Manifest PWA -->
+  <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#CC0000">
 
-  <link rel="stylesheet" href="/css/style.css">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css">
 
   <!-- JSON-LD Dados Estruturados -->
   <script type="application/ld+json">
@@ -53,7 +53,7 @@
         "legalName": "Olhos de Tigre Vistorias Automotivas Ltda.",
         "description": "Empresa credenciada de vistoria veicular em Jarinu/SP. Realizamos vistoria para transferência, identificação veicular, regularização, alteração de características e vistoria de motocicletas.",
         "url": "https://olhosdetigrevistorias.com.br",
-        "telephone": "+55-11-94444-5555",
+        "telephone": "+55-11-91033-9280",
         "email": "contato@olhosdetigrevistorias.com.br",
         "address": {
           "@type": "PostalAddress",
@@ -86,10 +86,7 @@
         "areaServed": ["Jarinu", "Atibaia", "Bragança Paulista", "Campo Limpo Paulista", "Jundiaí"],
         "hasMap": "https://maps.google.com/?q=Olhos+de+Tigre+Vistorias+Automotivas+Jarinu+SP",
         "image": "https://olhosdetigrevistorias.com.br/assets/logo-olhos-de-tigre-vistorias-automotivas.jpg",
-        "logo": "https://olhosdetigrevistorias.com.br/assets/logo-olhos-de-tigre-vistorias-automotivas.jpg",
-        "sameAs": [
-          "https://www.google.com/maps?q=Olhos+de+Tigre+Vistorias+Automotivas+Jarinu"
-        ]
+        "logo": "https://olhosdetigrevistorias.com.br/assets/logo-olhos-de-tigre-vistorias-automotivas.jpg"
       },
       {
         "@type": "WebSite",
@@ -99,20 +96,6 @@
         "description": "Site oficial da Olhos de Tigre Vistorias Automotivas em Jarinu/SP",
         "publisher": { "@id": "https://olhosdetigrevistorias.com.br/#business" },
         "inLanguage": "pt-BR"
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://olhosdetigrevistorias.com.br/#org",
-        "name": "Olhos de Tigre Vistorias Automotivas",
-        "url": "https://olhosdetigrevistorias.com.br",
-        "logo": "https://olhosdetigrevistorias.com.br/assets/logo-olhos-de-tigre-vistorias-automotivas.jpg",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+55-11-94444-5555",
-          "contactType": "customer service",
-          "areaServed": "BR",
-          "availableLanguage": "Portuguese"
-        }
       }
     ]
   }
@@ -124,8 +107,8 @@
   <header class="header" role="banner">
     <div class="container">
       <div class="header__inner">
-        <a href="/" class="header__logo" aria-label="Olhos de Tigre Vistorias Automotivas - Página inicial">
-          <img src="/assets/logo-olhos-de-tigre-vistorias-automotivas.jpg"
+        <a href="index.html" class="header__logo" aria-label="Olhos de Tigre Vistorias Automotivas - Página inicial">
+          <img src="assets/logo-olhos-de-tigre-vistorias-automotivas.jpg"
                alt="Logo Olhos de Tigre Vistorias Automotivas - Jarinu/SP"
                width="52" height="52"
                loading="eager">
@@ -137,7 +120,7 @@
 
         <nav class="nav" role="navigation" aria-label="Menu principal">
           <div class="nav__item">
-            <a href="/" class="nav__link active">Início</a>
+            <a href="index.html" class="nav__link active">Início</a>
           </div>
           <div class="nav__item nav__dropdown">
             <button class="nav__link nav__dropdown-toggle" aria-haspopup="true" aria-expanded="false">
@@ -147,26 +130,26 @@
               </svg>
             </button>
             <div class="nav__dropdown-menu" role="menu">
-              <a href="/vistoria-veicular-transferencia.html" role="menuitem">Vistoria para Transferência</a>
-              <a href="/vistoria-identificacao-veicular.html" role="menuitem">Vistoria de Identificação Veicular</a>
-              <a href="/vistoria-veiculos-automotores.html" role="menuitem">Vistoria de Veículos Automotores</a>
-              <a href="/vistoria-motocicletas.html" role="menuitem">Vistoria de Motocicletas</a>
-              <a href="/vistoria-alteracao-caracteristicas.html" role="menuitem">Vistoria para Alteração de Características</a>
-              <a href="/vistoria-regularizacao-veicular.html" role="menuitem">Vistoria para Regularização Veicular</a>
-              <a href="/vistoria-mudanca-municipio-estado.html" role="menuitem">Vistoria — Mudança de Município/Estado</a>
-              <a href="/laudo-cautelar.html" role="menuitem">Laudo Cautelar</a>
+              <a href="vistoria-veicular-transferencia.html" role="menuitem">Vistoria para Transferência</a>
+              <a href="vistoria-identificacao-veicular.html" role="menuitem">Vistoria de Identificação Veicular</a>
+              <a href="vistoria-veiculos-automotores.html" role="menuitem">Vistoria de Veículos Automotores</a>
+              <a href="vistoria-motocicletas.html" role="menuitem">Vistoria de Motocicletas</a>
+              <a href="vistoria-alteracao-caracteristicas.html" role="menuitem">Vistoria para Alteração de Características</a>
+              <a href="vistoria-regularizacao-veicular.html" role="menuitem">Vistoria para Regularização Veicular</a>
+              <a href="vistoria-mudanca-municipio-estado.html" role="menuitem">Vistoria — Mudança de Município/Estado</a>
+              <a href="laudo-cautelar.html" role="menuitem">Laudo Cautelar</a>
             </div>
           </div>
           <div class="nav__item">
-            <a href="/sobre.html" class="nav__link">Sobre</a>
+            <a href="sobre.html" class="nav__link">Sobre</a>
           </div>
           <div class="nav__item">
-            <a href="/contato.html" class="nav__link">Contato</a>
+            <a href="contato.html" class="nav__link">Contato</a>
           </div>
         </nav>
 
         <div class="header__cta">
-          <a href="https://wa.me/5511944445555?text=Ol%C3%A1%21+Encontrei+a+Olhos+de+Tigre+Vistorias+pelo+site+e+gostaria+de+informa%C3%A7%C3%B5es+sobre+vistoria+veicular."
+          <a href="https://wa.me/5511910339280?text=Ol%C3%A1%21+Encontrei+a+Olhos+de+Tigre+Vistorias+pelo+site+e+gostaria+de+informa%C3%A7%C3%B5es+sobre+vistoria+veicular."
              class="btn btn--wa"
              target="_blank"
              rel="noopener noreferrer"
@@ -190,31 +173,31 @@
   <nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile" role="navigation">
     <div class="mobile-menu__group">
       <div class="mobile-menu__title">Navegação</div>
-      <a href="/" class="mobile-menu__link">
+      <a href="index.html" class="mobile-menu__link">
         <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
         Início
       </a>
-      <a href="/sobre.html" class="mobile-menu__link">
+      <a href="sobre.html" class="mobile-menu__link">
         <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         Sobre a Empresa
       </a>
-      <a href="/contato.html" class="mobile-menu__link">
+      <a href="contato.html" class="mobile-menu__link">
         <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
         Contato e Localização
       </a>
     </div>
     <div class="mobile-menu__group">
       <div class="mobile-menu__title">Nossos Serviços</div>
-      <a href="/vistoria-veicular-transferencia.html" class="mobile-menu__link">Vistoria para Transferência</a>
-      <a href="/vistoria-identificacao-veicular.html" class="mobile-menu__link">Vistoria de Identificação Veicular</a>
-      <a href="/vistoria-veiculos-automotores.html" class="mobile-menu__link">Vistoria de Veículos Automotores</a>
-      <a href="/vistoria-motocicletas.html" class="mobile-menu__link">Vistoria de Motocicletas</a>
-      <a href="/vistoria-alteracao-caracteristicas.html" class="mobile-menu__link">Vistoria para Alteração de Características</a>
-      <a href="/vistoria-regularizacao-veicular.html" class="mobile-menu__link">Vistoria para Regularização Veicular</a>
-      <a href="/vistoria-mudanca-municipio-estado.html" class="mobile-menu__link">Vistoria — Mudança de Município/Estado</a>
-      <a href="/laudo-cautelar.html" class="mobile-menu__link">Laudo Cautelar</a>
+      <a href="vistoria-veicular-transferencia.html" class="mobile-menu__link">Vistoria para Transferência</a>
+      <a href="vistoria-identificacao-veicular.html" class="mobile-menu__link">Vistoria de Identificação Veicular</a>
+      <a href="vistoria-veiculos-automotores.html" class="mobile-menu__link">Vistoria de Veículos Automotores</a>
+      <a href="vistoria-motocicletas.html" class="mobile-menu__link">Vistoria de Motocicletas</a>
+      <a href="vistoria-alteracao-caracteristicas.html" class="mobile-menu__link">Vistoria para Alteração de Características</a>
+      <a href="vistoria-regularizacao-veicular.html" class="mobile-menu__link">Vistoria para Regularização Veicular</a>
+      <a href="vistoria-mudanca-municipio-estado.html" class="mobile-menu__link">Vistoria — Mudança de Município/Estado</a>
+      <a href="laudo-cautelar.html" class="mobile-menu__link">Laudo Cautelar</a>
     </div>
-    <a href="https://wa.me/5511944445555?text=Ol%C3%A1%21+Encontrei+a+Olhos+de+Tigre+Vistorias+pelo+site+e+gostaria+de+informa%C3%A7%C3%B5es+sobre+vistoria+veicular."
+    <a href="https://wa.me/5511910339280?text=Ol%C3%A1%21+Encontrei+a+Olhos+de+Tigre+Vistorias+pelo+site+e+gostaria+de+informa%C3%A7%C3%B5es+sobre+vistoria+veicular."
        class="mobile-menu__wa"
        target="_blank"
        rel="noopener noreferrer">
@@ -228,7 +211,7 @@
     <!-- ===== HERO ===== -->
     <section class="hero" aria-label="Bem-vindo à Olhos de Tigre Vistorias">
       <div class="hero__bg">
-        <img src="/assets/interior-vistoria-olhos-de-tigre-jarinu.jpg"
+        <img src="assets/interior-vistoria-olhos-de-tigre-jarinu.jpg"
              alt="Interior da Olhos de Tigre Vistorias Automotivas em Jarinu — veículos na área de vistoria"
              width="1200" height="675"
              loading="eager"
@@ -248,7 +231,7 @@
             Precisando realizar a vistoria do seu veículo? Conte com a Olhos de Tigre Vistorias Automotivas em Jarinu/SP. Atendimento profissional, orientação especializada e agilidade no processo de regularização junto ao DETRAN.
           </p>
           <div class="hero__buttons">
-            <a href="https://wa.me/5511944445555?text=Ol%C3%A1%21+Encontrei+a+Olhos+de+Tigre+Vistorias+pelo+site+e+gostaria+de+agendar+uma+vistoria+veicular."
+            <a href="https://wa.me/5511910339280?text=Ol%C3%A1%21+Encontrei+a+Olhos+de+Tigre+Vistorias+pelo+site+e+gostaria+de+agendar+uma+vistoria+veicular."
                class="btn btn--wa btn--lg"
                target="_blank"
                rel="noopener noreferrer"
@@ -295,7 +278,7 @@
             </div>
             <h3 class="service-card__title">Vistoria para Transferência</h3>
             <p class="service-card__desc">Vistoria obrigatória para transferência de propriedade de veículos no DETRAN-SP. Necessária na compra e venda de automóveis usados.</p>
-            <a href="/vistoria-veicular-transferencia.html" class="service-card__link" aria-label="Saiba mais sobre Vistoria para Transferência">
+            <a href="vistoria-veicular-transferencia.html" class="service-card__link" aria-label="Saiba mais sobre Vistoria para Transferência">
               Saiba mais
               <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </a>
@@ -307,7 +290,7 @@
             </div>
             <h3 class="service-card__title">Vistoria de Identificação Veicular</h3>
             <p class="service-card__desc">Verificação dos elementos de identificação do veículo (chassi, motor, placas). Exigida pelo DETRAN em diversos procedimentos administrativos.</p>
-            <a href="/vistoria-identificacao-veicular.html" class="service-card__link" aria-label="Saiba mais sobre Vistoria de Identificação Veicular">
+            <a href="vistoria-identificacao-veicular.html" class="service-card__link" aria-label="Saiba mais sobre Vistoria de Identificação Veicular">
               Saiba mais
               <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </a>
@@ -319,7 +302,7 @@
             </div>
             <h3 class="service-card__title">Vistoria de Veículos Automotores</h3>
             <p class="service-card__desc">Vistoria completa para automóveis, caminhonetes e utilitários. Atendemos todos os tipos de veículos leves conforme exigências do DETRAN.</p>
-            <a href="/vistoria-veiculos-automotores.html" class="service-card__link" aria-label="Saiba mais sobre Vistoria de Veículos Automotores">
+            <a href="vistoria-veiculos-automotores.html" class="service-card__link" aria-label="Saiba mais sobre Vistoria de Veículos Automotores">
               Saiba mais
               <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </a>
@@ -331,7 +314,7 @@
             </div>
             <h3 class="service-card__title">Vistoria de Motocicletas</h3>
             <p class="service-card__desc">Vistoria especializada para motocicletas, motonetas e ciclomotores. Atendemos transferência, regularização e demais procedimentos junto ao DETRAN.</p>
-            <a href="/vistoria-motocicletas.html" class="service-card__link" aria-label="Saiba mais sobre Vistoria de Motocicletas">
+            <a href="vistoria-motocicletas.html" class="service-card__link" aria-label="Saiba mais sobre Vistoria de Motocicletas">
               Saiba mais
               <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </a>
@@ -343,7 +326,7 @@
             </div>
             <h3 class="service-card__title">Vistoria para Alteração de Características</h3>
             <p class="service-card__desc">Obrigatória quando há alteração nas características originais do veículo, como mudança de cor, motor, carroceria ou outros itens registrados.</p>
-            <a href="/vistoria-alteracao-caracteristicas.html" class="service-card__link" aria-label="Saiba mais sobre Vistoria para Alteração de Características">
+            <a href="vistoria-alteracao-caracteristicas.html" class="service-card__link" aria-label="Saiba mais sobre Vistoria para Alteração de Características">
               Saiba mais
               <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </a>
@@ -355,7 +338,7 @@
             </div>
             <h3 class="service-card__title">Vistoria para Regularização Veicular</h3>
             <p class="service-card__desc">Auxílio na regularização de veículos com pendências documentais. Orientação sobre o processo junto ao DETRAN-SP para normalização do registro.</p>
-            <a href="/vistoria-regularizacao-veicular.html" class="service-card__link" aria-label="Saiba mais sobre Vistoria para Regularização Veicular">
+            <a href="vistoria-regularizacao-veicular.html" class="service-card__link" aria-label="Saiba mais sobre Vistoria para Regularização Veicular">
               Saiba mais
               <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </a>
@@ -367,7 +350,7 @@
             </div>
             <h3 class="service-card__title">Vistoria — Mudança de Município/Estado</h3>
             <p class="service-card__desc">Vistoria exigida quando o proprietário transfere a base do veículo para outro município ou estado, com atualização do registro no DETRAN.</p>
-            <a href="/vistoria-mudanca-municipio-estado.html" class="service-card__link" aria-label="Saiba mais sobre Vistoria para Mudança de Município ou Estado">
+            <a href="vistoria-mudanca-municipio-estado.html" class="service-card__link" aria-label="Saiba mais sobre Vistoria para Mudança de Município ou Estado">
               Saiba mais
               <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </a>
@@ -379,7 +362,7 @@
             </div>
             <h3 class="service-card__title">Laudo Cautelar</h3>
             <p class="service-card__desc">Análise detalhada do veículo para compra segura. Verificação de sinistros, adulterações e histórico. Essencial antes de adquirir um veículo usado.</p>
-            <a href="/laudo-cautelar.html" class="service-card__link" aria-label="Saiba mais sobre Laudo Cautelar">
+            <a href="laudo-cautelar.html" class="service-card__link" aria-label="Saiba mais sobre Laudo Cautelar">
               Saiba mais
               <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </a>
@@ -444,7 +427,7 @@
               <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
             </div>
             <h3 class="feature-item__title">Empresa Certificada</h3>
-            <p class="feature-item__desc">A Olhos de Tigre Vistorias possui certificação e opera seguindo padrões de qualidade no atendimento e execução das vistorias automotivas.</p>
+            <p class="feature-item__desc">A Olhos de Tigre Vistorias possui certificação ISO 9001 e opera seguindo padrões de qualidade rigorosos no atendimento e execução das vistorias automotivas.</p>
           </div>
 
         </div>
@@ -461,7 +444,7 @@
         </div>
         <div class="estrutura-grid">
           <div class="estrutura-img reveal reveal-delay-1">
-            <img src="/assets/interior-vistoria-olhos-de-tigre-jarinu.jpg"
+            <img src="assets/interior-vistoria-olhos-de-tigre-jarinu.jpg"
                  alt="Interior da Olhos de Tigre Vistorias — área de vistoria com demarcações amarelas no piso, moto e carro posicionados para inspeção"
                  width="800" height="450"
                  loading="lazy">
@@ -471,7 +454,7 @@
             <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--cor-primaria);">Preparados para realizar a vistoria do seu veículo</h3>
             <p style="color: var(--cor-texto-claro); line-height: 1.75;">Nosso espaço conta com área específica para posicionamento e inspeção de veículos, incluindo automóveis e motocicletas. O ambiente é organizado, com demarcações no piso para garantir um atendimento padronizado.</p>
             <p style="color: var(--cor-texto-claro); line-height: 1.75;">Atendemos os moradores de Jarinu e cidades da região, como Atibaia, Bragança Paulista e Campo Limpo Paulista, com orientação completa sobre os procedimentos necessários no DETRAN-SP.</p>
-            <a href="https://wa.me/5511944445555?text=Ol%C3%A1%21+Gostaria+de+agendar+uma+vistoria+veicular+na+Olhos+de+Tigre."
+            <a href="https://wa.me/5511910339280?text=Ol%C3%A1%21+Gostaria+de+agendar+uma+vistoria+veicular+na+Olhos+de+Tigre."
                class="btn btn--red"
                target="_blank"
                rel="noopener noreferrer"
@@ -578,7 +561,7 @@
         </div>
         <div class="reviews-cta reveal" style="margin-top: 32px; text-align: center;">
           <p style="color: var(--cor-texto-claro); margin-bottom: 16px; font-size: 0.9rem;">
-            <strong>Nota:</strong> As avaliações acima são representativas do tipo de feedback recebido. Consulte as avaliações verificadas diretamente no Google.
+            Consulte as avaliações verificadas diretamente no Google Maps.
           </p>
           <a href="https://www.google.com/maps/search/Olhos+de+Tigre+Vistorias+Automotivas+Jarinu"
              class="btn btn--red"
@@ -624,8 +607,8 @@
               <div>
                 <div class="info-item__label">WhatsApp</div>
                 <div class="info-item__value">
-                  <a href="https://wa.me/5511944445555?text=Ol%C3%A1%21+Encontrei+a+Olhos+de+Tigre+Vistorias+pelo+site+e+gostaria+de+informa%C3%A7%C3%B5es."
-                     target="_blank" rel="noopener noreferrer">(11) 94444-5555</a>
+                  <a href="https://wa.me/5511910339280?text=Ol%C3%A1%21+Encontrei+a+Olhos+de+Tigre+Vistorias+pelo+site+e+gostaria+de+informa%C3%A7%C3%B5es."
+                     target="_blank" rel="noopener noreferrer">(11) 91033-9280</a>
                 </div>
               </div>
             </div>
@@ -713,7 +696,7 @@
             </button>
             <div class="faq-answer" id="faq-2" role="region">
               <div class="faq-answer__inner">
-                Para a vistoria de transferência de veículo, geralmente são necessários: CRV (Certificado de Registro de Veículo) ou DUT, CNH do proprietário, CPF e documento de compra e venda (nota fiscal ou contrato). Os documentos exatos podem variar. Recomendamos confirmar pelo WhatsApp antes do atendimento.
+                Para a vistoria de transferência de veículo, geralmente são necessários: CRV (Certificado de Registro de Veículo) ou ATPV-e, CNH do proprietário, CPF e comprovante de endereço. Recomendamos confirmar pelo WhatsApp antes do atendimento.
               </div>
             </div>
           </div>
@@ -727,7 +710,7 @@
             </button>
             <div class="faq-answer" id="faq-3" role="region">
               <div class="faq-answer__inner">
-                O tempo de realização da vistoria varia conforme o tipo de serviço e as condições do veículo. Em geral, as vistorias são ágeis. Após a vistoria, orientamos sobre os próximos passos no DETRAN, que tem seus próprios prazos de processamento.
+                O tempo de realização da vistoria varia de 15 a 25 minutos na maioria dos casos. Após a vistoria, o laudo é emitido eletronicamente e fica disponível de imediato no sistema do DETRAN-SP.
               </div>
             </div>
           </div>
@@ -741,7 +724,7 @@
             </button>
             <div class="faq-answer" id="faq-4" role="region">
               <div class="faq-answer__inner">
-                Sim! A Olhos de Tigre Vistorias realiza vistoria de motocicletas, motonetas e ciclomotores. Contamos com espaço dedicado para o posicionamento e inspeção de motos. Atendemos transferência, identificação veicular, regularização e demais tipos de vistoria para motocicletas.
+                Sim! A Olhos de Tigre Vistorias conta com baia exclusiva com piso demarcado para o posicionamento e inspeção segura de motos, motonetas e ciclomotores.
               </div>
             </div>
           </div>
@@ -755,7 +738,7 @@
             </button>
             <div class="faq-answer" id="faq-5" role="region">
               <div class="faq-answer__inner">
-                Em caso de reprovação, nossa equipe orienta sobre as razões e os passos necessários para corrigir as pendências identificadas. Após as correções, é possível agendar nova vistoria. Nossa equipe está disponível para esclarecer todas as dúvidas durante o processo.
+                Em caso de apontamento ou pendência, nossa equipe orienta exatamente quais correções são necessárias (como troca de lâmpada, remoção de insulfilm irregular ou limpeza de motor). Após o ajuste, realiza-se a revistoria para aprovação.
               </div>
             </div>
           </div>
@@ -769,7 +752,7 @@
             </button>
             <div class="faq-answer" id="faq-6" role="region">
               <div class="faq-answer__inner">
-                A <strong>vistoria de identificação veicular</strong> é um procedimento administrativo exigido pelo DETRAN para confirmar os dados de identificação do veículo (chassi, motor, placas). O <strong>laudo cautelar</strong> é um serviço particular, voltado para compradores de veículos usados que desejam uma análise detalhada antes da compra, verificando histórico de sinistros e adulterações. São serviços diferentes, com finalidades distintas.
+                A <strong>vistoria de identificação veicular</strong> é o procedimento oficial exigido pelo DETRAN-SP para transferências e regularizações. O <strong>laudo cautelar</strong> é uma perícia particular detalhada para compra segura, que investiga integridade de longarinas, espessura de pintura e histórico de leilões.
               </div>
             </div>
           </div>
@@ -783,7 +766,7 @@
             </button>
             <div class="faq-answer" id="faq-7" role="region">
               <div class="faq-answer__inner">
-                Sim! Atendemos clientes de Jarinu e cidades próximas, como Atibaia, Bragança Paulista, Campo Limpo Paulista e Jundiaí. Nosso endereço é de fácil acesso pela rodovia. Entre em contato pelo WhatsApp para confirmar a melhor forma de chegar até nós.
+                Sim! Como nosso laudo é integrado ao sistema estadual do DETRAN-SP, atendemos regularmente clientes de Atibaia, Bragança Paulista, Campo Limpo Paulista, Várzea Paulista e Jundiaí.
               </div>
             </div>
           </div>
@@ -797,7 +780,7 @@
             </button>
             <div class="faq-answer" id="faq-8" role="region">
               <div class="faq-answer__inner">
-                A forma mais rápida é pelo nosso <strong>WhatsApp: (11) 94444-5555</strong>. Você também pode nos visitar pessoalmente na Av. Ângelo Bernucci, 372, Centro, Jarinu/SP, de segunda a sexta das 08h às 17h30 e sábados das 08h às 12h.
+                A forma mais rápida é pelo nosso <strong>WhatsApp: (11) 91033-9280</strong>. Você também pode nos visitar na Av. Ângelo Bernucci, 372, Centro, Jarinu/SP, de segunda a sexta das 08h às 17h30 e aos sábados das 08h às 12h.
               </div>
             </div>
           </div>
@@ -814,7 +797,7 @@
           <h2 class="cta-section__title" id="cta-titulo">Fale Agora com a Olhos de Tigre Vistorias</h2>
           <p class="cta-section__subtitle">Entre em contato pelo WhatsApp, tire suas dúvidas e agende sua vistoria veicular em Jarinu/SP. Atendimento rápido e orientação especializada.</p>
           <div class="cta-section__buttons">
-            <a href="https://wa.me/5511944445555?text=Ol%C3%A1%21+Encontrei+a+Olhos+de+Tigre+Vistorias+pelo+site+e+gostaria+de+agendar+uma+vistoria+veicular."
+            <a href="https://wa.me/5511910339280?text=Ol%C3%A1%21+Encontrei+a+Olhos+de+Tigre+Vistorias+pelo+site+e+gostaria+de+agendar+uma+vistoria+veicular."
                class="btn btn--wa btn--lg"
                target="_blank"
                rel="noopener noreferrer"
@@ -822,7 +805,7 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
               Falar pelo WhatsApp
             </a>
-            <a href="/contato.html" class="btn btn--outline btn--lg">
+            <a href="contato.html" class="btn btn--outline btn--lg">
               Ver mais formas de contato
             </a>
           </div>
@@ -838,7 +821,7 @@
       <div class="footer__grid">
         <div>
           <div class="footer__logo">
-            <img src="/assets/logo-olhos-de-tigre-vistorias-automotivas.jpg"
+            <img src="assets/logo-olhos-de-tigre-vistorias-automotivas.jpg"
                  alt="Olhos de Tigre Vistorias Automotivas"
                  width="60" height="60"
                  loading="lazy">
@@ -849,22 +832,22 @@
         <div>
           <h3 class="footer__title">Serviços</h3>
           <div class="footer__links">
-            <a href="/vistoria-veicular-transferencia.html" class="footer__link">Vistoria para Transferência</a>
-            <a href="/vistoria-identificacao-veicular.html" class="footer__link">Vistoria de Identificação</a>
-            <a href="/vistoria-veiculos-automotores.html" class="footer__link">Vistoria de Automotores</a>
-            <a href="/vistoria-motocicletas.html" class="footer__link">Vistoria de Motocicletas</a>
-            <a href="/vistoria-alteracao-caracteristicas.html" class="footer__link">Alteração de Características</a>
-            <a href="/vistoria-regularizacao-veicular.html" class="footer__link">Regularização Veicular</a>
-            <a href="/vistoria-mudanca-municipio-estado.html" class="footer__link">Mudança de Município/Estado</a>
-            <a href="/laudo-cautelar.html" class="footer__link">Laudo Cautelar</a>
+            <a href="vistoria-veicular-transferencia.html" class="footer__link">Vistoria para Transferência</a>
+            <a href="vistoria-identificacao-veicular.html" class="footer__link">Vistoria de Identificação</a>
+            <a href="vistoria-veiculos-automotores.html" class="footer__link">Vistoria de Automotores</a>
+            <a href="vistoria-motocicletas.html" class="footer__link">Vistoria de Motocicletas</a>
+            <a href="vistoria-alteracao-caracteristicas.html" class="footer__link">Alteração de Características</a>
+            <a href="vistoria-regularizacao-veicular.html" class="footer__link">Regularização Veicular</a>
+            <a href="vistoria-mudanca-municipio-estado.html" class="footer__link">Mudança de Município/Estado</a>
+            <a href="laudo-cautelar.html" class="footer__link">Laudo Cautelar</a>
           </div>
         </div>
 
         <div>
           <h3 class="footer__title">Empresa</h3>
           <div class="footer__links">
-            <a href="/sobre.html" class="footer__link">Sobre nós</a>
-            <a href="/contato.html" class="footer__link">Contato</a>
+            <a href="sobre.html" class="footer__link">Sobre nós</a>
+            <a href="contato.html" class="footer__link">Contato</a>
           </div>
         </div>
 
@@ -877,7 +860,7 @@
             </div>
             <div class="footer__contact-item">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              <a href="https://wa.me/5511944445555" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.7);">(11) 94444-5555</a>
+              <a href="https://wa.me/5511910339280" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.7);">(11) 91033-9280</a>
             </div>
             <div class="footer__contact-item">
               <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -894,7 +877,7 @@
   </footer>
 
   <!-- ===== WHATSAPP FLUTUANTE ===== -->
-  <a href="https://wa.me/5511944445555?text=Ol%C3%A1%21+Encontrei+a+Olhos+de+Tigre+Vistorias+pelo+site+e+gostaria+de+informa%C3%A7%C3%B5es+sobre+vistoria+veicular."
+  <a href="https://wa.me/5511910339280?text=Ol%C3%A1%21+Encontrei+a+Olhos+de+Tigre+Vistorias+pelo+site+e+gostaria+de+informa%C3%A7%C3%B5es+sobre+vistoria+veicular."
      class="whatsapp-float"
      target="_blank"
      rel="noopener noreferrer"
@@ -906,9 +889,6 @@
     </svg>
   </a>
 
-  <script>
-    document.getElementById('ano').textContent = new Date().getFullYear();
-  </script>
-  <script src="/js/main.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
