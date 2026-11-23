@@ -1,0 +1,16 @@
+{
+  "name": "Olhos de Tigre Vistorias Automotivas",
+  "short_name": "Olhos de Tigre",
+  "description": "Vistoria veicular em Jarinu/SP: transferência, identificação veicular, motocicletas, regularização e laudo cautelar.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#CC0000",
+  "icons": [
+    {
+      "src": "/assets/logo-olhos-de-tigre-vistorias-automotivas.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
