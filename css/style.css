@@ -1194,3 +1194,360 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .header, .whatsapp-float, .mobile-menu, .nav-toggle { display: none !important; }
   body { margin-top: 0; }
 }
+
+/* ---- MOBILE OVERFLOW FIXES (service pages) ---- */
+.service-content__main h2,
+.service-content__main p,
+.service-content__main ul,
+.service-content__main li,
+.service-sidebar__card p,
+.service-sidebar__card ul,
+.accordion__content p {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+.service-content__grid {
+  overflow: hidden;
+}
+.service-sidebar__card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.service-sidebar__card ul li a {
+  word-break: break-word;
+}
+/* Prevent inline style grid from collapsing on mobile */
+@media (max-width: 767px) {
+  .about-grid,
+  [style*="grid-template-columns: 1fr 1fr"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px !important;
+  }
+  .service-content__grid {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .btn--lg {
+    padding: 15px 24px;
+    font-size: 0.95rem;
+  }
+  .hero__bg img {
+    object-position: 30% center;
+  }
+}
+
+/* ---- PHOTO GALLERY (sobre.html) ---- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 32px;
+}
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.gallery-item {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: var(--cor-fundo-alt);
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+  display: block;
+}
+.gallery-item:hover img { transform: scale(1.06); }
+.gallery-item__caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 20px 10px 8px;
+}
+.gallery-item--wide {
+  grid-column: span 2;
+  aspect-ratio: 16/7;
+}
+
+/* ---- PAGE HERO fix for inner pages ---- */
+.page-hero {
+  background: linear-gradient(135deg, var(--cor-primaria-escura) 0%, var(--cor-primaria) 100%);
+  padding: 100px 0 52px;
+  margin-top: 70px;
+  color: #fff;
+}
+.page-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,215,0,0.15);
+  border: 1px solid rgba(255,215,0,0.4);
+  color: var(--cor-secundaria);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+.page-hero__title {
+  font-size: clamp(1.5rem, 4vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  word-break: break-word;
+}
+.page-hero__desc {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  color: rgba(255,255,255,0.88);
+  max-width: 620px;
+  line-height: 1.65;
+  margin-bottom: 28px;
+}
+.page-hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+/* breadcrumb standalone bar */
+.breadcrumb {
+  background: var(--cor-fundo-alt);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--cor-borda);
+}
+.breadcrumb__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.breadcrumb__item { color: var(--cor-texto-claro); }
+.breadcrumb__item:hover { color: var(--cor-primaria); }
+.breadcrumb__sep { color: var(--cor-texto-muito-claro); }
+.breadcrumb__current { color: var(--cor-primaria); font-weight: 600; }
+
+/* ---- SERVICE BOX (highlight inside service pages) ---- */
+.service-box {
+  background: rgba(204,0,0,0.05);
+  border-left: 4px solid var(--cor-primaria);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 18px 20px;
+  margin: 24px 0;
+}
+.service-box__title {
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--cor-primaria);
+  margin-bottom: 8px;
+}
+.service-box p { font-size: 0.9rem; color: var(--cor-texto-claro); line-height: 1.6; margin: 0; }
+
+/* ---- ACCORDION (service page FAQs) ---- */
+.accordion { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
+.accordion__item {
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.accordion__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 18px;
+  font-size: 0.925rem;
+  font-weight: 700;
+  color: var(--cor-texto);
+  background: #fff;
+  gap: 12px;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.accordion__header:hover { color: var(--cor-primaria); }
+.accordion__icon {
+  flex-shrink: 0;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--cor-primaria);
+  transition: transform 0.3s;
+  line-height: 1;
+}
+.accordion__item.open .accordion__icon { transform: rotate(45deg); }
+.accordion__body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+.accordion__item.open .accordion__body { max-height: 300px; }
+.accordion__content {
+  padding: 0 18px 16px;
+  font-size: 0.9rem;
+  color: var(--cor-texto-claro);
+  line-height: 1.65;
+  background: #fff;
+}
+.accordion__content p { margin: 0; }
+
+/* ---- SERVICE SIDEBAR ---- */
+.service-sidebar__card {
+  background: var(--cor-fundo-alt);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 20px;
+  border: 1px solid var(--cor-borda);
+}
+.service-sidebar__card h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: var(--cor-texto);
+}
+.service-sidebar__card p {
+  font-size: 0.875rem;
+  color: var(--cor-texto-claro);
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+
+/* ====================================================
+   CORREÇÕES FINAIS — LOGO PNG + OVERFLOW MOBILE
+   ==================================================== */
+
+/* Logo PNG esportiva — garantir que fique bem enquadrada */
+.header__logo img {
+  height: 52px;
+  width: 52px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* Garantir sem overflow horizontal em TODAS as telas */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Tabelas dentro de páginas de serviço */
+table {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+}
+
+/* Links de serviço relacionados no sidebar não saem da tela */
+.service-sidebar__card a {
+  display: block;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  font-size: 0.85rem;
+  padding: 4px 0;
+  color: var(--cor-primaria);
+}
+.service-sidebar__card a:hover {
+  text-decoration: underline;
+}
+
+/* WhatsApp flutuante — melhor posicionamento mobile */
+@media (max-width: 480px) {
+  .whatsapp-float {
+    bottom: 16px !important;
+    right: 16px !important;
+    width: 52px !important;
+    height: 52px !important;
+  }
+  .whatsapp-float svg {
+    width: 26px !important;
+    height: 26px !important;
+  }
+}
+
+/* Hero — garantir que a imagem de fundo cubra bem em mobile */
+@media (max-width: 600px) {
+  .hero {
+    min-height: 85vh;
+  }
+  .hero__title {
+    font-size: clamp(1.6rem, 7vw, 2.4rem);
+  }
+  .hero__buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero__buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .hero__stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+/* Footer mobile */
+@media (max-width: 600px) {
+  .footer__grid {
+    grid-template-columns: 1fr !important;
+  }
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+}
+
+/* Botão "Conhecer Nossos Serviços" não sai da viewport */
+.btn--outline {
+  flex-wrap: nowrap;
+}
+@media (max-width: 400px) {
+  .btn--lg {
+    padding: 14px 18px;
+    font-size: 0.88rem;
+  }
+  .btn svg {
+    flex-shrink: 0;
+  }
+}
+
+/* Seção de serviços — cards não transbordam */
+.services-grid {
+  overflow: hidden;
+}
+.service-card {
+  overflow: hidden;
+  word-break: break-word;
+}
+
+/* Galeria sobre.html — mobile 1 coluna se necessário */
+@media (max-width: 400px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-item--wide {
+    grid-column: span 1;
+    aspect-ratio: 4/3;
+  }
+  .servicos-fotos-grid {
+    grid-template-columns: 1fr;
+  }
+}
